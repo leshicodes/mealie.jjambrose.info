@@ -7,7 +7,8 @@ services:
     repo: leshicodes/mealie.jjambrose.info
   http_port: 9000
   dockerfile_path: Dockerfile # Changed to use Dockerfile
-  instance_size_slug: basic-xxxs
+  instance_size_slug: basic-xxs
+  instance_count: 1  # Explicitly set to 1 instance
   envs:
   - key: ALLOW_SIGNUP
     value: "false"
@@ -23,31 +24,3 @@ services:
   - name: mealie-data
     mount_path: /app/data
     size_gb: 10
-
-
-# name: mealie
-# services:
-# - name: mealie
-#   type: service  # Explicitly defining type
-#   github:
-#     branch: main
-#     deploy_on_push: true
-#     repo: leshicodes/mealie.jjambrose.info
-#   dockerfile_path: Dockerfile
-#   http_port: 9000
-#   instance_size_slug: basic-s
-#   envs:
-#   - key: ALLOW_SIGNUP
-#     value: "false"
-#   - key: PUID
-#     value: "1000"
-#   - key: PGID
-#     value: "1000" 
-#   - key: TZ
-#     value: "America/Chicago"
-#   - key: BASE_URL
-#     value: ${APP_URL}
-#   volumes:
-#   - name: mealie-data
-#     mount_path: /app/data
-#     size_gb: 10
