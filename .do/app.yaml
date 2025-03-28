@@ -7,7 +7,7 @@ services:
     repo: leshicodes/mealie.jjambrose.info
   http_port: 9000
   dockerfile_path: Dockerfile # Changed to use Dockerfile
-  instance_size_slug: basic-xxs
+  instance_size_slug: basic-xxxs
   envs:
   - key: ALLOW_SIGNUP
     value: "false"
