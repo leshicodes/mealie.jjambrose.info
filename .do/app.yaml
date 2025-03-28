@@ -1,0 +1,29 @@
+name: mealie
+services:
+- name: mealie
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: your-github-username/mealie.jjambrose.info
+  http_port: 9000
+  image:
+    registry: ghcr.io
+    registry_type: GITHUB
+    repository: mealie-recipes/mealie
+    tag: v2.8.0
+  instance_size_slug: basic-s # Equivalent to ~1GB memory
+  envs:
+  - key: ALLOW_SIGNUP
+    value: "false"
+  - key: PUID
+    value: "1000"
+  - key: PGID
+    value: "1000" 
+  - key: TZ
+    value: "America/Chicago"
+  - key: BASE_URL
+    value: ${APP_URL}
+  volumes:
+  - name: mealie-data
+    mount_path: /app/data
+    size_gb: 10
