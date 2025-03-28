@@ -2,7 +2,7 @@ FROM ghcr.io/mealie-recipes/mealie:v2.8.0
 
 ENV PUID=1000 \
     PGID=1000 \
-    TZ=America/Anchorage \
+    TZ=America/Chicago \
     ALLOW_SIGNUP="false"
 
 # Railway automatically injects PORT env variable
