@@ -9,6 +9,14 @@ services:
   dockerfile_path: Dockerfile # Changed to use Dockerfile
   instance_size_slug: basic-xxs
   instance_count: 1  # Explicitly set to 1 instance
+  health_check:
+    http_path: /
+    port: 9000
+    initial_delay_seconds: 30
+    period_seconds: 10
+    timeout_seconds: 5
+    success_threshold: 1
+    failure_threshold: 3
   envs:
   - key: ALLOW_SIGNUP
     value: "false"
@@ -23,4 +31,4 @@ services:
   volumes:
   - name: mealie-data
     mount_path: /app/data
-    size_gb: 10
+    size_gb: 5

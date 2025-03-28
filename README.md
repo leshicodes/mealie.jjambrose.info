@@ -48,9 +48,9 @@ docker-compose up -d
 ```
 
 ## Resources
-<!-- 
-- [Official Mealie Documentation](https://hay-kot.github.io/mealie/)
-- [GitHub Repository](https://github.com/hay-kot/mealie) -->
+
+- [Official Mealie Documentation](https://docs.mealie.io/)
+- [GitHub Repository](https://github.com/mealie-recipes/mealie)
 
 ## License
 
