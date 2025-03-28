@@ -3,7 +3,8 @@ FROM ghcr.io/mealie-recipes/mealie:v2.8.0
 ENV PUID=1000 \
     PGID=1000 \
     TZ=America/Chicago \
-    ALLOW_SIGNUP="false"
+    ALLOW_SIGNUP="false"\
+    BASE_URL="https://recipes.jjambrose.info"
 
 # Railway automatically injects PORT env variable
 # We'll use it to set BASE_URL within the container
