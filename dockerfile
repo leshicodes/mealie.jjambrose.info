@@ -1,4 +1,4 @@
-FROM ghcr.io/mealie-recipes/mealie:v2.8.0
+FROM ghcr.io/mealie-recipes/mealie:3.0.1
 
 ENV PUID=1000 \
     PGID=1000 \
